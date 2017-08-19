@@ -6,12 +6,16 @@
  */
 
 
-/*function wnd_calc_scripts()
+function wnd_calc_scripts()
 {
     wp_enqueue_script('jquery');
     //wp_enqueue_script('jquery-effects-core');
+
+    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/js/bootstrap.js');
+    wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/css/bootstrap.css');
 }
-add_action('wp_enqueue_scripts', 'wnd_calc_scripts');*/
+
+add_action('wp_enqueue_scripts', 'wnd_calc_scripts');
 
 
 add_action('admin_menu', 'plugin_admin_add_car_calc_page');
