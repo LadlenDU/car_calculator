@@ -27,7 +27,7 @@
     line-height: 1.75;
     word-wrap: break-word;
     font-size: 17px;
-    background: #f4f4f4;
+    /*background: #f4f4f4;*/
     font-family: CuprumRegular, sans-serif;
     color: #333;
     padding-bottom: 30px;
@@ -63,3 +63,113 @@
     display: block;
     margin-top: 0em;
 }
+
+#form-online .form-group {
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+#form-online .form-group:nth-child(even) {
+    background: #dddbdb;
+}
+
+.text-block .form-control {
+    display: block;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+}
+
+.text-block .form-control {
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.text-block .form-control, .form-control .selectize-input {
+    border-radius: 0;
+}
+
+.text-block .checkbox, .text-block .radio {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.text-block .checkbox {
+    padding-left: 20px;
+}
+
+/* checkboxes */
+.text-block .checkbox input[type="checkbox"],
+.text-block .checkbox input[type="radio"] {
+    opacity: 0;
+    z-index: 1;
+}
+
+.text-block .checkbox-inline input[type="checkbox"],
+.text-block .checkbox input[type="checkbox"],
+.text-block .radio-inline input[type="radio"],
+.text-block .radio input[type="radio"] {
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 4px;
+}
+
+.text-block input[type="checkbox"], .text-block input[type="radio"] {
+    margin: 4px 0 0;
+    margin-top: 1px;
+    line-height: normal;
+}
+
+.text-block input[type="checkbox"], .text-block input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+/* label */
+.text-block .checkbox label,
+.text-block .radio label {
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.text-block .checkbox label {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 5px;
+}
+
+.text-block .checkbox label:before {
+    content: "";
+    width: 17px;
+    height: 17px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    -webkit-transition: border .15s ease-in-out , color .15s ease-in-out;
+    transition: border .15s ease-in-out , color .15s ease-in-out;
+}
+
+.text-block .checkbox label:after,
+.text-block .checkbox label:before {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    margin-left: -20px;
+}
+
+
+
