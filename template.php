@@ -9,24 +9,24 @@
             <input type="hidden" value="make_order" name="action">
             <div class="form-group">
                 <div class="row">
-                    <div class="name col-sm-3"><span>Марка автомобиля</span></div> <!-- .table-cell -->
-                    <div class="param col-sm-9">
+                    <div class="name col-md-3"><span>Марка автомобиля</span></div> <!-- .table-cell -->
+                    <div class="param col-md-9">
                         <select name="brand" id="brands" class="form-control selectized">
                             <option selected="" disabled="">Выберите марку своего автомобиля</option>
                         </select>
                     </div> <!-- .table-cell --> </div> <!-- .table-row --> </div>
             <div class="form-group">
                 <div class="row">
-                    <div class="name col-sm-3"><span>Модель автомобиля</span></div> <!-- .table-cell -->
-                    <div class="param col-sm-9">
+                    <div class="name col-md-3"><span>Модель автомобиля</span></div> <!-- .table-cell -->
+                    <div class="param col-md-9">
                         <select name="model" id="models" class="form-control selectized">
                             <option selected="" disabled="">Выберите модель своего автомобиля</option>
                         </select>
                     </div> <!-- .table-cell --> </div> <!-- .table-row --> </div>
             <div class="form-group">
                 <div class="row">
-                    <div class="name col-sm-3"><span>Год выпуска по ПТС</span></div> <!-- .table-cell -->
-                    <div class="param col-sm-9"><select name="year" class="form-control">
+                    <div class="name col-md-3"><span>Год выпуска по ПТС</span></div> <!-- .table-cell -->
+                    <div class="param col-md-9"><select name="year" class="form-control">
                             <option selected="" disabled="">Выберите из списка</option>
                             <option>1980</option>
                             <option>1981</option>
@@ -67,8 +67,8 @@
                         </select></div> <!-- .table-cell --> </div> <!-- .table-row --> </div>
             <div class="form-group">
                 <div class="row">
-                    <div class="name col-sm-3"><span>Коробка передач</span></div> <!-- .table-cell -->
-                    <div class="param col-sm-9"><select name="korobka" class="form-control required" id="korobka">
+                    <div class="name col-md-3"><span>Коробка передач</span></div> <!-- .table-cell -->
+                    <div class="param col-md-9"><select name="korobka" class="form-control required" id="korobka">
                             <option selected="">Механическая</option>
                             <option>Автомат</option>
                             <option>- АКПП</option>
@@ -78,8 +78,8 @@
             </div> <!-- .table-row -->
             <div class="form-group">
                 <div class="row">
-                    <div class="name col-sm-3"><span>Пробег</span></div> <!-- .table-cell -->
-                    <div class="param col-sm-9"><select name="probeg" id="probeg" class="form-control">
+                    <div class="name col-md-3"><span>Пробег</span></div> <!-- .table-cell -->
+                    <div class="param col-md-9"><select name="probeg" id="probeg" class="form-control">
                             <option selected="">5000</option>
                             <option>10 000 до 20 000</option>
                             <option>20 000 до 30 000</option>
@@ -104,10 +104,10 @@
                         </select></div> <!-- .table-cell --> </div> <!-- .table-row --> </div>
             <div class="form-group">
                 <div class="row">
-                    <div class="name col-sm-3">
+                    <div class="name col-md-3">
                         <span>Есть ли <b>значительные</b> повреждения<br> по кузову автомобиля?</span></div>
                     <!-- .table-cell -->
-                    <div class="param col-sm-3">
+                    <div class="param col-md-3">
                         <div class="checkbox checkbox-primary"><input id="bz" value="Бампер зад" name="povrejdeniya[]"
                                                                       type="checkbox"> <label
                                     for="bz"><span>Бампер зад</span></label></div>
@@ -121,7 +121,7 @@
                                                                       name="povrejdeniya[]" type="checkbox"> <label
                                     for="dzp"><span>Дверь Задняя Правая</span></label></div>
                     </div>
-                    <div class="param col-sm-3">
+                    <div class="param col-md-3">
                         <div class="checkbox checkbox-primary"><input id="dpl" value="Дверь передняя Левая"
                                                                       name="povrejdeniya[]" type="checkbox"> <label
                                     for="dpl"><span>Дверь передняя Левая</span></label></div>
@@ -135,7 +135,7 @@
                                                                       name="povrejdeniya[]" type="checkbox"> <label
                                     for="kpp"><span>Крыло переднее Правое</span></label></div>
                     </div>
-                    <div class="param col-sm-3">
+                    <div class="param col-md-3">
                         <div class="checkbox checkbox-primary"><input id="kzl" value="Крыло Заднее Левое"
                                                                       name="povrejdeniya[]" type="checkbox"> <label
                                     for="kzl"><span>Крыло Заднее Левое</span></label></div>
@@ -151,17 +151,17 @@
                     </div> <!-- .table-cell --> </div> <!-- .table-row --> </div>
             <div class="form-group">
                 <div class="row">
-                    <div class="name col-sm-3">
+                    <div class="name col-md-3">
                         <span><b>Результат калькуляции</b> сообщим на указанный Вами телефон</span> <br> <span
                                 class="isbold">(это ни к чему не обязывает)</span></div> <!-- .table-cell -->
-                    <div class="param col-sm-9">
+                    <div class="param col-md-9">
                         <div class="raschet"><span>Расчет выполняет автоэксперт с учетом <span class="isbold">сегодняшних цен на рынке</span></span>
                         </div>
                         <input name="phone" class="required rfield form-control" placeholder="+7 (___) ___ __ __"
                                id="user_phone" type="text"></div> <!-- .table-cell --> </div> <!-- .table-row --> </div>
             <div class="row">
-                <div class="name col-sm-3"><span>Расчет займет не более 2-х минут</span></div> <!-- .table-cell -->
-                <div class="param col-sm-9"><input name="form" value="online-calc" type="hidden">
+                <div class="name col-md-3"><span>Расчет займет не более 2-х минут</span></div> <!-- .table-cell -->
+                <div class="param col-md-9"><input name="form" value="online-calc" type="hidden">
                     <button value="Рассчитать стоимость автомобиля" type="submit" class="submitSend btn btn-danger">
                         Рассчитать стоимость <span class="hidden-xs">автомобиля</span></button>
                 </div> <!-- .table-cell --> </div> <!-- .table-row --> </form>
