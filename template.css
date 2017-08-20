@@ -24,13 +24,18 @@
 
 .text-block {
     -webkit-tap-highlight-color: transparent;
-    line-height: 1.75;
+    /*line-height: 1.75;*/
     word-wrap: break-word;
     font-size: 17px;
     /*background: #f4f4f4;*/
     font-family: CuprumRegular, sans-serif;
     color: #333;
     padding-bottom: 30px;
+    line-height: 1.428571429;
+}
+
+.text-block .isbold {
+    font-weight: 700;
 }
 
 .text-block h1 {
@@ -97,7 +102,8 @@
     border-radius: 0;
 }
 
-.text-block .checkbox, .text-block .radio {
+.text-block .checkbox,
+.text-block .radio {
     position: relative;
     display: block;
     margin-top: 10px;
@@ -124,13 +130,15 @@
     margin-top: 4px;
 }
 
-.text-block input[type="checkbox"], .text-block input[type="radio"] {
+.text-block input[type="checkbox"],
+.text-block input[type="radio"] {
     margin: 4px 0 0;
     margin-top: 1px;
     line-height: normal;
 }
 
-.text-block input[type="checkbox"], .text-block input[type="radio"] {
+.text-block input[type="checkbox"],
+.text-block input[type="radio"] {
     box-sizing: border-box;
     padding: 0;
 }
@@ -159,8 +167,8 @@
     border: 1px solid #ccc;
     border-radius: 3px;
     background-color: #fff;
-    -webkit-transition: border .15s ease-in-out , color .15s ease-in-out;
-    transition: border .15s ease-in-out , color .15s ease-in-out;
+    -webkit-transition: border .15s ease-in-out, color .15s ease-in-out;
+    transition: border .15s ease-in-out, color .15s ease-in-out;
 }
 
 .text-block .checkbox label:after,
@@ -171,5 +179,71 @@
     margin-left: -20px;
 }
 
+/* selectize */
+.text-block .form-control.selectize-control {
+    padding: 0;
+    height: auto;
+    border: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+}
 
+.text-block .form-control.selectize-control {
+    height: 34px;
+}
 
+.text-block input,
+.text-block textarea,
+.text-block select,
+.text-block button,
+.text-block meter,
+.text-block progress {
+    -webkit-writing-mode: horizontal-tb;
+}
+
+.text-block input,
+.text-block textarea,
+.text-block select,
+.text-block button {
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font-family: CuprumRegular, sans-serif;
+    font-size: 14px;
+}
+
+.text-block select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    -webkit-rtl-ordering: logical;
+    background-color: white;
+    cursor: default;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+    text-transform: none;
+}
+
+.text-block .form-control,
+.text-block output {
+    display: block;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+}
+
+.text-block option {
+    font-weight: normal;
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
