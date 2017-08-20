@@ -18,6 +18,14 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('fonts/FontAwesome/fontawesome-webfont.eot?v=4.7.0');
+    src: url('fonts/FontAwesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('fonts/FontAwesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('fonts/FontAwesome/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('fonts/FontAwesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('fonts/FontAwesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *, :after, :before {
     box-sizing: border-box;
 }
@@ -187,6 +195,27 @@
     background: none;
     box-shadow: none;
     border-radius: 0;
+}
+
+.text-block .checkbox label:after {
+    width: 16px;
+    height: 16px;
+    top: 0;
+    padding-left: 3px;
+    padding-top: 1px;
+    font-size: 11px;
+    color: #555;
+}
+
+.text-block .checkbox input[type="checkbox"]:checked + label:after,
+.text-block .checkbox input[type="radio"]:checked + label:after {
+    font-family: FontAwesome;
+    content: "";
+}
+
+.text-block .checkbox-primary input[type="checkbox"]:checked + label:after,
+.text-block .checkbox-primary input[type="radio"]:checked + label:after {
+    color: #fff;
 }
 
 .text-block .form-control:focus {
