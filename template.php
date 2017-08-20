@@ -1,8 +1,12 @@
+<script>
+    var wndSelPluginPath = <?php echo json_encode(plugins_url('', __FILE__)) ?>;
+</script>
 <div class="text-block">
     <h1>Оценка авто на онлайн-калькуляторе</h1>
     <p></p>
     <div id="form-online">
-        <form action="/" method="post">
+        <form method="post">
+            <input type="hidden" value="make_order" name="action">
             <div class="form-group">
                 <div class="row">
                     <div class="name col-sm-3"><span>Марка автомобиля</span></div> <!-- .table-cell -->
