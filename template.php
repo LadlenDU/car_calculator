@@ -2,15 +2,15 @@
     <h1>Оценка авто на онлайн-калькуляторе</h1>
     <p></p>
     <div id="form-online">
-        <form action="/" enctype="multipart/form-data" method="post">
+        <form action="/" method="post">
             <div class="form-group">
                 <div class="row">
                     <div class="name col-sm-3"><span>Марка автомобиля</span></div> <!-- .table-cell -->
-                    <div class="param col-sm-9"><select name="brand" id="brands" class="form-control selectized"
-                                                        tabindex="-1" style="display: none;">
-                            <option value="" selected="selected"></option>
+                    <div class="param col-sm-9">
+                        <select name="brand" id="brands" class="form-control selectized">
+                            <option selected="" disabled="">Выберите марку своего автомобиля</option>
                         </select>
-                        <div class="selectize-control form-control single">
+                        <!--<div class="selectize-control form-control single">
                             <div class="selectize-input items not-full has-options"><input autocomplete="off"
                                                                                            tabindex=""
                                                                                            placeholder="Выберите марку своего автомобиля"
@@ -140,23 +140,23 @@
                                     <div data-value="Другая" data-selectable="" class="option">Другая</div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                     </div> <!-- .table-cell --> </div> <!-- .table-row --> </div>
             <div class="form-group">
                 <div class="row">
                     <div class="name col-sm-3"><span>Модель автомобиля</span></div> <!-- .table-cell -->
-                    <div class="param col-sm-9"><select name="model" id="models" class="form-control selectized"
-                                                        tabindex="-1" style="display: none;">
-                            <option value="" selected="selected"></option>
+                    <div class="param col-sm-9">
+                        <select name="model" id="models" class="form-control selectized">
+                            <option selected="" disabled="">Выберите модель своего автомобиля</option>
                         </select>
-                        <div class="selectize-control form-control single">
+                        <!--<div class="selectize-control form-control single">
                             <div class="selectize-input items not-full"><input autocomplete="off" tabindex=""
                                                                                placeholder="Выберите модель своего автомобиля"
                                                                                style="width: 223px;" type="text"></div>
                             <div class="selectize-dropdown single form-control" style="display: none;">
                                 <div class="selectize-dropdown-content"></div>
                             </div>
-                        </div>
+                        </div>-->
                     </div> <!-- .table-cell --> </div> <!-- .table-row --> </div>
             <div class="form-group">
                 <div class="row">
