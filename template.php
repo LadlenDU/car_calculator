@@ -1,4 +1,5 @@
-<div class="text-block"><h1>Оценка авто на онлайн-калькуляторе</h1>
+<div class="text-block">
+    <h1>Оценка авто на онлайн-калькуляторе</h1>
     <p></p>
     <div id="form-online">
         <form action="/" enctype="multipart/form-data" method="post">

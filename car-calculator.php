@@ -11,8 +11,8 @@ function wnd_calc_scripts()
     wp_enqueue_script('jquery');
     //wp_enqueue_script('jquery-effects-core');
 
-    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/js/bootstrap.js');
-    wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/css/bootstrap.css');
+    wp_enqueue_script('bootstrap-js', plugins_url('', __FILE__) . '/js/bootstrap.min.js');
+    wp_enqueue_style('bootstrap-css', plugins_url('', __FILE__) . '/css/bootstrap.min.css');
 }
 
 add_action('wp_enqueue_scripts', 'wnd_calc_scripts');

@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "Exo2Regular";
+    src: url("fonts/Exo2Regular/Exo2Regular.eot");
+    src: url("fonts/Exo2Regular/Exo2Regular.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Exo2Regular/Exo2Regular.woff") format("woff"),
+    url("fonts/Exo2Regular/Exo2Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "CuprumRegular";
+    src: url("fonts/CuprumRegular/CuprumRegular.eot");
+    src: url("fonts/CuprumRegular/CuprumRegular.eot?#iefix") format("embedded-opentype"),
+    url("fonts/CuprumRegular/CuprumRegular.woff") format("woff"),
+    url("fonts/CuprumRegular/CuprumRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+.text-block {
+    -webkit-tap-highlight-color: transparent;
+    line-height: 1.75;
+    word-wrap: break-word;
+    font-size: 17px;
+    background: #f4f4f4;
+    font-family: CuprumRegular, sans-serif;
+    color: #333;
+    padding-bottom: 30px;
+}
+
+.text-block h1 {
+    display: block;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    line-height: 1.1;
+    font-size: 36px;
+    margin: 15px 0 10px;
+    padding: 0 0 6px;
+    font-family: Exo2Regular, sans-serif;
+    font-weight: 400;
+    color: #517bb3;
+}
+
+.text-block p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    padding: 5px 0;
+    margin: 0;
+    line-height: 20px;
+}
+
+.text-block form {
+    display: block;
+    margin-top: 0em;
+}
