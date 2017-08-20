@@ -51,15 +51,16 @@ $damage
 ORDER;
 
     $option = get_option('plugin_options_car_calc');
-    $mail = $option['email'];
+    $to = $option['email'];
 
-    if (wp_mail($mail, 'Заказан расчет автомобиля', $mailMessage)) {
+    if (mail($to, 'Заказан расчет автомобиля', $mailMessage)) {
         $res = ['status' => 'success', 'msg' => 'Заказ успешно создан'];
     } else {
         $res = ['status' => 'error', 'msg' => 'Ошибка создания заказа. Попробуйте пожалуйста позже.'];
     }
+
     die(json_encode($res));
 
 } else {
-    die('0');
+    die(json_encode('0'));
 }
