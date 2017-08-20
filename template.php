@@ -202,100 +202,6 @@
                         </select></div> <!-- .table-cell --> </div> <!-- .table-row --> </div>
             <div class="form-group">
                 <div class="row">
-                    <div class="name col-sm-3"><span>Объем двигателя</span></div> <!-- .table-cell -->
-                    <div class="param col-sm-9"><select name="obyem" class="required form-control" id="obyem">
-                            <option>0,5</option>
-                            <option>0,6</option>
-                            <option>0,7</option>
-                            <option>0,8</option>
-                            <option>0,9</option>
-                            <option>1,0</option>
-                            <option>1,1</option>
-                            <option>1,2</option>
-                            <option>1,3</option>
-                            <option>1,4</option>
-                            <option>1,5</option>
-                            <option>1,6</option>
-                            <option>1,7</option>
-                            <option>1,8</option>
-                            <option>1,9</option>
-                            <option>2,0</option>
-                            <option>2,1</option>
-                            <option>2,2</option>
-                            <option>2,3</option>
-                            <option>2,4</option>
-                            <option>2,5</option>
-                            <option>2,6</option>
-                            <option>2,7</option>
-                            <option>2,8</option>
-                            <option>2,9</option>
-                            <option>3,0</option>
-                            <option>3,1</option>
-                            <option>3,2</option>
-                            <option>3,3</option>
-                            <option>3,4</option>
-                            <option>3,5</option>
-                            <option>3,6</option>
-                            <option>3,7</option>
-                            <option>3,8</option>
-                            <option>3,9</option>
-                            <option>4,0</option>
-                            <option>4,1</option>
-                            <option>4,2</option>
-                            <option>4,3</option>
-                            <option>4,4</option>
-                            <option>4,5</option>
-                            <option>4,6</option>
-                            <option>4,7</option>
-                            <option>4,8</option>
-                            <option>4,9</option>
-                            <option>5,0</option>
-                            <option>5,1</option>
-                            <option>5,2</option>
-                            <option>5,3</option>
-                            <option>5,4</option>
-                            <option>5,5</option>
-                            <option>5,6</option>
-                            <option>5,7</option>
-                            <option>5,8</option>
-                            <option>5,9</option>
-                            <option>6,0</option>
-                            <option>6,1</option>
-                            <option>6,2</option>
-                            <option>6,3</option>
-                            <option>6,4</option>
-                            <option>6,5</option>
-                            <option>6,6</option>
-                            <option>6,7</option>
-                            <option>6,8</option>
-                            <option>6,9</option>
-                            <option>7,0</option>
-                            <option>7,1</option>
-                            <option>7,2</option>
-                            <option>7,3</option>
-                            <option>7,4</option>
-                            <option>7,5</option>
-                            <option>7,6</option>
-                            <option>7,7</option>
-                            <option>7,8</option>
-                            <option>7,9</option>
-                            <option>8,0</option>
-                        </select></div> <!-- .table-cell --> </div> <!-- .table-row --> </div>
-            <div class="form-group">
-                <div class="row">
-                    <div class="name col-sm-3"><span>Тип двигателя</span></div> <!-- .table-cell -->
-                    <div class="param col-sm-9"><select name="enjine" class="required form-control" id="enjine">
-                            <option selected="">Бензин инжектор</option>
-                            <option>Бензин карбюратор</option>
-                            <option>Бензин турбонаддув</option>
-                            <option>Дизель</option>
-                            <option>Дизель турбонаддув</option>
-                            <option>Бензин ротор</option>
-                            <option>Бензин + газ</option>
-                            <option>Гибридный</option>
-                        </select></div> <!-- .table-cell --> </div> <!-- .table-row --> </div> <!-- .form-group -->
-            <div class="form-group">
-                <div class="row">
                     <div class="name col-sm-3"><span>Коробка передач</span></div> <!-- .table-cell -->
                     <div class="param col-sm-9"><select name="korobka" class="form-control required" id="korobka">
                             <option selected="">Механическая</option>
@@ -377,25 +283,6 @@
                         <div class="checkbox checkbox-primary"><input id="kop" value="Капот" name="povrejdeniya[]"
                                                                       type="checkbox"> <label
                                     for="kop"><span>Капот</span></label></div>
-                    </div> <!-- .table-cell --> </div> <!-- .table-row --> </div>
-            <div class="form-group">
-                <div class="row">
-                    <div class="name col-sm-3"><p>Загрузите фото</p></div> <!-- .table-cell -->
-                    <div class="param col-sm-9">
-                        <div class="image-preview-list">
-                            <div class="image-preview"><label for="image-upload-1">Выберите фото</label> <input
-                                        name="image[]" id="image-upload-1" accept="image/*" type="file"></div>
-                            <div class="image-preview"><label for="image-upload-2">Выберите фото</label> <input
-                                        name="image[]" id="image-upload-2" accept="image/*" type="file"></div>
-                            <div class="image-preview"><label for="image-upload-3">Выберите фото</label> <input
-                                        name="image[]" id="image-upload-3" accept="image/*" type="file"></div>
-                            <div class="image-preview"><label for="image-upload-4">Выберите фото</label> <input
-                                        name="image[]" id="image-upload-4" accept="image/*" type="file"></div>
-                            <div class="image-preview"><label for="image-upload-5">Выберите фото</label> <input
-                                        name="image[]" id="image-upload-5" accept="image/*" type="file"></div>
-                            <div class="image-preview"><label for="image-upload-6">Выберите фото</label> <input
-                                        name="image[]" id="image-upload-6" accept="image/*" type="file"></div>
-                        </div>
                     </div> <!-- .table-cell --> </div> <!-- .table-row --> </div>
             <div class="form-group">
                 <div class="row">
