@@ -200,22 +200,30 @@
 .text-block .checkbox label:after {
     width: 16px;
     height: 16px;
-    top: 0;
-    padding-left: 3px;
-    padding-top: 1px;
-    font-size: 11px;
+    top: -5px;
+    padding-left: 0;
+    padding-top: 0;
+    font-size: 19px;
     color: #555;
+}
+
+.text-block input[type="checkbox"]:focus,
+.text-block input[type="file"]:focus,
+.text-block input[type="radio"]:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
 }
 
 .text-block .checkbox input[type="checkbox"]:checked + label:after,
 .text-block .checkbox input[type="radio"]:checked + label:after {
-    font-family: FontAwesome;
-    content: "";
+    font-family: FontAwesome, sans-serif;
+    content: "\f14a";
 }
 
 .text-block .checkbox-primary input[type="checkbox"]:checked + label:after,
 .text-block .checkbox-primary input[type="radio"]:checked + label:after {
-    color: #fff;
+    color: #366cab;
 }
 
 .text-block .form-control:focus {
