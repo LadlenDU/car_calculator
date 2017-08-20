@@ -6,16 +6,18 @@
  */
 
 
-function wnd_calc_scripts()
+/*function wnd_calc_scripts()
 {
     wp_enqueue_script('jquery');
     //wp_enqueue_script('jquery-effects-core');
 
     wp_enqueue_script('bootstrap-js', plugins_url('', __FILE__) . '/js/bootstrap.min.js');
     wp_enqueue_style('bootstrap-css', plugins_url('', __FILE__) . '/css/bootstrap.min.css');
+
+    wp_enqueue_script('maskedinput-js', plugins_url('', __FILE__) . '/js/jquery.maskedinput.min.js');
 }
 
-add_action('wp_enqueue_scripts', 'wnd_calc_scripts');
+add_action('wp_enqueue_scripts', 'wnd_calc_scripts');*/
 
 
 add_action('admin_menu', 'plugin_admin_add_car_calc_page');
@@ -81,6 +83,11 @@ wp_register_style('car_calc_style', plugins_url('', __FILE__) . '/template.css')
 wp_register_script('car_calc_script', plugins_url('', __FILE__) . '/template.js', ['jquery']);
 //wp_register_script('wnd_calc_order_popup_script', plugins_url('', __FILE__) . '/jquery.bpopup.min.js', ['jquery']);
 
+wp_register_script('popper-js', plugins_url('', __FILE__) . '/js/popper.min.js');
+wp_register_script('bootstrap-js', plugins_url('', __FILE__) . '/js/bootstrap.min.js');
+wp_register_style('bootstrap-css', plugins_url('', __FILE__) . '/css/bootstrap.min.css');
+wp_register_script('maskedinput-js', plugins_url('', __FILE__) . '/js/jquery.maskedinput.min.js');
+
 function shortcode_car_calc()
 {
     wp_enqueue_style('car_calc_style');
@@ -88,6 +95,12 @@ function shortcode_car_calc()
 
     wp_enqueue_script('car_calc_script');
     //wp_enqueue_script('wnd_calc_order_popup_script');
+
+    wp_enqueue_script('popper-js');
+    wp_enqueue_script('bootstrap-js');
+    wp_enqueue_style('bootstrap-css');
+    wp_enqueue_script('maskedinput-js');
+
 
     ob_start();
     require_once 'template.php';
