@@ -348,3 +348,9 @@
     outline-offset: -2px;
     box-shadow: none;
 }
+
+@media (max-width: 767px) {
+    .text-block .hidden-xs {
+        display: none !important;
+    }
+}
