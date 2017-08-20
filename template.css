@@ -354,3 +354,23 @@
         display: none !important;
     }
 }
+
+#user_phone::-webkit-input-placeholder {
+    font-family: CuprumRegular, sans-serif;
+    font-size: 14px;
+}
+
+#user_phone:-ms-input-placeholder {
+    font-family: CuprumRegular, sans-serif;
+    font-size: 14px;
+}
+
+#user_phone:-moz-placeholder {
+    font-family: CuprumRegular, sans-serif;
+    font-size: 14px;
+}
+
+#user_phone::-moz-placeholder {
+    font-family: CuprumRegular, sans-serif;
+    font-size: 14px;
+}
