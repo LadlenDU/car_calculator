@@ -157,7 +157,7 @@ jQuery(function ($) {
                     $('.cc_user_phone_confirm').focus();
                 },
                 cancelButtonText: 'Отменить',
-                confirmButtonText: 'Отослать',
+                confirmButtonText: 'Отправить',
                 preConfirm: function () {
                     return new Promise(function (resolve, reject) {
                         var phone = $('.cc_user_phone_confirm').val();
