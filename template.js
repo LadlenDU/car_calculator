@@ -145,6 +145,33 @@ jQuery(function ($) {
     $("#form-online form").submit(function (e) {
         e.preventDefault();
 
+        //$("#user_phone").mask("+7 (999) 999 99 99");
+
+        if (!$('#user_phone').val()) {
+            swal({
+                text: 'Введите пожалуйста телефон чтобы мы с вами связались и предложили ссуму выкупа',
+                input: 'text',
+                inputPlaceholder: '+7 (___) ___ __ __',
+                inputClass: 'cc_user_phone_confirm',
+                showCancelButton: true,
+                onOpen: function () {
+                    $('.cc_user_phone_confirm').mask("+7 (999) 999 99 99");
+                    $('.cc_user_phone_confirm').focus();
+                },
+                cancelButtonText: 'Отменить',
+                confirmButtonText: 'Отослать'
+            }).then(function (phone) {
+                alert("phone: " + phone);
+                /*if (password) {
+                 swal({
+                 type: 'success',
+                 html: 'Entered password: ' + password
+                 })
+                 }*/
+            });
+            return;
+        }
+
         $.post(wndSelPluginPath + '/ajax.php', $(this).serialize(), function (res) {
             if (res) {
                 if (res.status == 'success') {

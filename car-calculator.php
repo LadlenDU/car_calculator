@@ -5,21 +5,6 @@
  * Version: 1.0
  */
 
-
-/*function wnd_calc_scripts()
-{
-    wp_enqueue_script('jquery');
-    //wp_enqueue_script('jquery-effects-core');
-
-    wp_enqueue_script('bootstrap-js', plugins_url('', __FILE__) . '/js/bootstrap.min.js');
-    wp_enqueue_style('bootstrap-css', plugins_url('', __FILE__) . '/css/bootstrap.min.css');
-
-    wp_enqueue_script('maskedinput-js', plugins_url('', __FILE__) . '/js/jquery.maskedinput.min.js');
-}
-
-add_action('wp_enqueue_scripts', 'wnd_calc_scripts');*/
-
-
 add_action('admin_menu', 'plugin_admin_add_car_calc_page');
 function plugin_admin_add_car_calc_page()
 {
@@ -74,19 +59,24 @@ function plugin_calc_car_func()
 }
 
 
-//wp_enqueue_script('jquery');
+$pUrl = plugins_url('', __FILE__);
 
-wp_register_style('car_calc_style', plugins_url('', __FILE__) . '/template.css');
-//wp_register_style('wnd_calc_bpopup', plugins_url('', __FILE__) . '/bpopup.css');
+wp_register_style('car_calc_style', $pUrl . '/template.css');
+//wp_register_style('wnd_calc_bpopup', $pUrl . '/bpopup.css');
 
 //wp_register_script('jquery-effects-core');    // wrong params
-wp_register_script('car_calc_script', plugins_url('', __FILE__) . '/template.js', ['jquery']);
-//wp_register_script('wnd_calc_order_popup_script', plugins_url('', __FILE__) . '/jquery.bpopup.min.js', ['jquery']);
+wp_register_script('car_calc_script', $pUrl . '/template.js', ['jquery']);
+//wp_register_script('wnd_calc_order_popup_script', $pUrl . '/jquery.bpopup.min.js', ['jquery']);
 
-wp_register_script('popper-js', plugins_url('', __FILE__) . '/js/popper.min.js');
-wp_register_script('bootstrap-js', plugins_url('', __FILE__) . '/js/bootstrap.min.js');
-wp_register_style('bootstrap-css', plugins_url('', __FILE__) . '/css/bootstrap.min.css');
-wp_register_script('maskedinput-js', plugins_url('', __FILE__) . '/js/jquery.maskedinput.min.js');
+wp_register_script('popper-js', $pUrl . '/js/popper.min.js');
+wp_register_script('bootstrap-js', $pUrl . '/js/bootstrap.min.js');
+wp_register_style('bootstrap-css', $pUrl . '/css/bootstrap.min.css');
+wp_register_script('maskedinput-js', $pUrl . '/js/jquery.maskedinput.min.js');
+
+wp_register_style('sweetalert2-css', 'https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.10/sweetalert2.css');
+wp_register_script('sweetalert2-js', 'https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.10/sweetalert2.js');
+
+wp_register_script('polyfill_ES6', 'https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js');
 
 function shortcode_car_calc()
 {
@@ -100,6 +90,11 @@ function shortcode_car_calc()
     wp_enqueue_script('bootstrap-js');
     wp_enqueue_style('bootstrap-css');
     wp_enqueue_script('maskedinput-js');
+
+    wp_enqueue_style('sweetalert2-css');
+    wp_enqueue_script('sweetalert2-js');
+
+    wp_enqueue_script('polyfill_ES6');
 
 
     ob_start();
