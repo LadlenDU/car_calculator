@@ -149,25 +149,72 @@ jQuery(function ($) {
             var html = '<h2 class="swal2-title" id="swal2-title"></h2>'
                 + '<div id="swal2-content" class="swal2-content" style="display: block;">Введите пожалуйста телефон чтобы мы с вами связались и предложили ссуму выкупа</div>'
                 + '<input class="swal2-input cc_user_phone_confirm" placeholder="+7 (___) ___ __ __" type="text">';
+                //+ '<div class="cc_user_phone_confirm_error swal2-validationerror" style="display: none;">Введите пожалуйста телефон!</div>';
             swal({
-                /*text: 'Введите пожалуйста телефон чтобы мы с вами связались и предложили ссуму выкупа',
-                input: 'text',
-                inputPlaceholder: '+7 (___) ___ __ __',
-                inputClass: 'cc_user_phone_confirm rfield',*/
                 showCancelButton: true,
-                /*focusCancel: true,*/
                 html: html,
                 onOpen: function () {
-                    $('.cc_user_phone_confirm').mask("+7 (999) 999 99 99");
+                    $('.cc_user_phone_confirm').mask(
+                        "+7 (999) 999 99 99"/*,
+                         {
+                         completed: function () {
+                         alert("You typed the following: " + this.val());
+                         }
+                         }*/
+                    );
                     $('.cc_user_phone_confirm').focus();
-                    /*setTimeout(function () {
-                        $('.cc_user_phone_confirm').blur();
-                        $('.cc_user_phone_confirm').mask("+7 (999) 999 99 99");
-                    }, 4000);*/
                 },
                 cancelButtonText: 'Отменить',
-                confirmButtonText: 'Отослать'
-            }).then(function (phone) {
+                confirmButtonText: 'Отослать'/*,
+                 inputValidator: function (value) {
+                 alert(44);
+                 return new Promise(function (resolve, reject) {
+                 reject('Введите пожалуйста телефон!');
+                 alert('sdflss');
+                 if ($('.cc_user_phone_confirm').val()) {
+                 resolve();
+                 } else {
+                 reject('Введите пожалуйста телефон!');
+                 }
+                 })
+                 }*/
+                ,
+                preConfirm: function () {
+                    return new Promise(function (resolve, reject) {
+                        var phone = $('.cc_user_phone_confirm').val();
+                        if (phone) {
+                            resolve();
+                        } else {
+                            reject('Введите пожалуйста телефон!');
+                        }
+
+                        /*$.get('https://api.ipify.org?format=json')
+                            .done(function (data) {
+                                swal.insertQueueStep(data.ip)
+                                resolve()
+                            })*/
+                    })
+                }
+            }).then(function () {
+                var phone = $('.cc_user_phone_confirm').val();
+                if (phone) {
+                    /*alert("phone4: " + phone);
+                    $('.cc_user_phone_confirm_error').css('display', 'block');
+                    return false;*/
+                }
+
+                /*new Promise(function (resolve, reject) {
+                    reject('Введите пожалуйста телефон!');
+                    return;
+                    if ($('.cc_user_phone_confirm').val()) {
+                        resolve();
+                    } else {
+                        reject('Введите пожалуйста телефон!');
+                    }
+                });
+
+                return false;*/
+
                 alert("phone: " + phone);
                 /*if (password) {
                  swal({
