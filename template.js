@@ -149,36 +149,15 @@ jQuery(function ($) {
             var html = '<h2 class="swal2-title" id="swal2-title"></h2>'
                 + '<div id="swal2-content" class="swal2-content" style="display: block;">Введите пожалуйста телефон чтобы мы с вами связались и предложили ссуму выкупа</div>'
                 + '<input class="swal2-input cc_user_phone_confirm" placeholder="+7 (___) ___ __ __" type="text">';
-                //+ '<div class="cc_user_phone_confirm_error swal2-validationerror" style="display: none;">Введите пожалуйста телефон!</div>';
             swal({
                 showCancelButton: true,
                 html: html,
                 onOpen: function () {
-                    $('.cc_user_phone_confirm').mask(
-                        "+7 (999) 999 99 99"/*,
-                         {
-                         completed: function () {
-                         alert("You typed the following: " + this.val());
-                         }
-                         }*/
-                    );
+                    $('.cc_user_phone_confirm').mask("+7 (999) 999 99 99");
                     $('.cc_user_phone_confirm').focus();
                 },
                 cancelButtonText: 'Отменить',
-                confirmButtonText: 'Отослать'/*,
-                 inputValidator: function (value) {
-                 alert(44);
-                 return new Promise(function (resolve, reject) {
-                 reject('Введите пожалуйста телефон!');
-                 alert('sdflss');
-                 if ($('.cc_user_phone_confirm').val()) {
-                 resolve();
-                 } else {
-                 reject('Введите пожалуйста телефон!');
-                 }
-                 })
-                 }*/
-                ,
+                confirmButtonText: 'Отослать',
                 preConfirm: function () {
                     return new Promise(function (resolve, reject) {
                         var phone = $('.cc_user_phone_confirm').val();
@@ -187,50 +166,35 @@ jQuery(function ($) {
                         } else {
                             reject('Введите пожалуйста телефон!');
                         }
-
-                        /*$.get('https://api.ipify.org?format=json')
-                            .done(function (data) {
-                                swal.insertQueueStep(data.ip)
-                                resolve()
-                            })*/
                     })
                 }
             }).then(function () {
                 var phone = $('.cc_user_phone_confirm').val();
                 if (phone) {
-                    /*alert("phone4: " + phone);
-                    $('.cc_user_phone_confirm_error').css('display', 'block');
-                    return false;*/
+                    $('#user_phone').val(phone);
+                    createOrder($("#form-online form"));
                 }
-
-                /*new Promise(function (resolve, reject) {
-                    reject('Введите пожалуйста телефон!');
-                    return;
-                    if ($('.cc_user_phone_confirm').val()) {
-                        resolve();
-                    } else {
-                        reject('Введите пожалуйста телефон!');
-                    }
-                });
-
-                return false;*/
-
-                alert("phone: " + phone);
-                /*if (password) {
-                 swal({
-                 type: 'success',
-                 html: 'Entered password: ' + password
-                 })
-                 }*/
             }).catch(swal.noop);
             return;
         }
 
-        $.post(wndSelPluginPath + '/ajax.php', $(this).serialize(), function (res) {
+        createOrder($(this));
+
+        return false;
+    });
+
+    function createOrder(form) {
+        var redirecting = false;
+        var values = form.serialize();
+        $("body").css("cursor", "progress");
+        $("input, button, select", form).prop('disabled', true);
+        $.post(wndSelPluginPath + '/ajax.php', values, function (res) {
             if (res) {
                 if (res.status == 'success') {
-                    alert('Заказ успешно создан');
-                    $("#form-online form").get(0).reset();
+                    //alert('Заказ успешно создан');
+                    window.location.href = "/авто/";
+                    redirecting = true;
+                    //$("#form-online form").get(0).reset();
                 } else if (res.status == 'error') {
                     alert(res.msg);
                 } else {
@@ -239,10 +203,13 @@ jQuery(function ($) {
             } else {
                 showError();
             }
-        }).error(function () {
+        }).fail(function () {
             showError();
+        }).always(function () {
+            if (!redirecting) {
+                $("body").css("cursor", "default");
+                $("input, button, select", form).prop('disabled', false);
+            }
         });
-
-        return false;
-    });
+    }
 });
