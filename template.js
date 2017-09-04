@@ -145,18 +145,25 @@ jQuery(function ($) {
     $("#form-online form").submit(function (e) {
         e.preventDefault();
 
-        //$("#user_phone").mask("+7 (999) 999 99 99");
-
         if (!$('#user_phone').val()) {
+            var html = '<h2 class="swal2-title" id="swal2-title"></h2>'
+                + '<div id="swal2-content" class="swal2-content" style="display: block;">Введите пожалуйста телефон чтобы мы с вами связались и предложили ссуму выкупа</div>'
+                + '<input class="swal2-input cc_user_phone_confirm" placeholder="+7 (___) ___ __ __" type="text">';
             swal({
-                text: 'Введите пожалуйста телефон чтобы мы с вами связались и предложили ссуму выкупа',
+                /*text: 'Введите пожалуйста телефон чтобы мы с вами связались и предложили ссуму выкупа',
                 input: 'text',
                 inputPlaceholder: '+7 (___) ___ __ __',
-                inputClass: 'cc_user_phone_confirm',
+                inputClass: 'cc_user_phone_confirm rfield',*/
                 showCancelButton: true,
+                /*focusCancel: true,*/
+                html: html,
                 onOpen: function () {
                     $('.cc_user_phone_confirm').mask("+7 (999) 999 99 99");
                     $('.cc_user_phone_confirm').focus();
+                    /*setTimeout(function () {
+                        $('.cc_user_phone_confirm').blur();
+                        $('.cc_user_phone_confirm').mask("+7 (999) 999 99 99");
+                    }, 4000);*/
                 },
                 cancelButtonText: 'Отменить',
                 confirmButtonText: 'Отослать'
@@ -168,7 +175,7 @@ jQuery(function ($) {
                  html: 'Entered password: ' + password
                  })
                  }*/
-            });
+            }).catch(swal.noop);
             return;
         }
 
